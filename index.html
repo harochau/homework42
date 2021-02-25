@@ -9,12 +9,19 @@
 
     <script>
         arr = [0.8,4,-0.17,2,0.9,1];
-        let max = 0;
-        arr.forEach(element => {
-            if (element>max)
+        function findMax(arr){
+        let max = arr[0];
+        let max_index = 0;
+        arr.forEach(index, element => {
+            if (element>max){
             max = element;
-        });
-        alert(max);
+            max_index = index;
+        }
+        })
+        return max, max_index;
+        }
+        res, res_i = findMax(arr);
+        alert('Максимальный элемент '+res+" под индексом"+ res_i);
 
 
     </script>
