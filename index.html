@@ -3,25 +3,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homework 4. Task 2.</title>
 </head>
 <body>
 
     <script>
-        arr = [0.8,4,-0.17,2,0.9,1];
+        arr = [0.8,-200,4,-0.17,11.1,2,0.9,1];
         function findMax(arr){
         let max = arr[0];
         let max_index = 0;
-        arr.forEach(index, element => {
-            if (element>max){
+        arr.forEach(element => {
+            if (element>max)
             max = element;
-            max_index = index;
-        }
         })
-        return max, max_index;
+        max_index = arr.indexOf(max);
+
+        return [max, max_index];
         }
-        res, res_i = findMax(arr);
-        alert('Максимальный элемент '+res+" под индексом"+ res_i);
+        let [res, res_i] = findMax(arr);
+        alert('Максимальный элемент равный '+res+" находится под индексом "+ res_i);
 
 
     </script>
