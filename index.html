@@ -18,9 +18,9 @@
         })
         max_index = arr.indexOf(max);
 
-        return [max, max_index];
+        return {max:max, max_index:max_index};
         }
-        let [res, res_i] = findMax(arr);
+        let {max:res, max_index:res_i} = findMax(arr);
         alert('Максимальный элемент равный '+res+" находится под индексом "+ res_i);
 
 
